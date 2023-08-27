@@ -31,27 +31,39 @@ body {
 
 .header-bottom {
     display: flex;
-    
-    border-style: solid;
 }
 
 .header-info, .p1{
     font-size: 48px;
-    margin-right: 120px;
+    margin-right: 140px;
     color: #f9faf8;
+}
+
+.p1 {
+    margin: auto;
+}
+
+.p2 {
+    margin: auto;
+}
+
+.p3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .header-info, .p2 {
     font-size: 18px;
     color: #e5e7eb;
-    border-style: solid;
 }
 
 .header-image {
-    padding-left: 400px;
+    padding: 0 140px;
+    background-color: grey;
     display: flex;
     align-items: center;
-
     border-style: solid;
 }
 
@@ -59,4 +71,7 @@ button {
     background-color: #3882F6;
     color: white;
     font-size: 18px;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-top: 10px;
 }
