@@ -64,7 +64,6 @@ body {
     background-color: grey;
     display: flex;
     align-items: center;
-    border-style: solid;
 }
 
 button {
@@ -74,4 +73,49 @@ button {
     border-radius: 10px;
     padding: 10px 30px;
     margin-top: 10px;
+}
+
+.section-one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: white;
+}
+
+.p4 {
+    color: black;
+    font-size: 36px;
+}
+
+.box-container {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    border-style: solid;
+    border-color: #3882F6;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+.subtext-container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    text-align: center;
+    padding-bottom: 100px;
+
+}
+
+.subtext {
+    width: 130px;
+    margin-top: 5px;
 }
