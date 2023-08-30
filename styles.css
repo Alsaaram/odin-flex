@@ -119,3 +119,24 @@ button {
     width: 130px;
     margin-top: 5px;
 }
+
+.section2 {
+    background-color: #e5e7eb;
+    display: flex;
+    padding: 0px 370px;
+    flex-direction: column;
+    font-size: 36px;
+    padding-top: 80px;
+}
+
+.quote {
+    color: #1F2937;
+}
+
+.author {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 30px;
+}
