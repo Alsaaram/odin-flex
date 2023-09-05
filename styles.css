@@ -140,3 +140,36 @@ button {
     padding: 0;
     margin-bottom: 30px;
 }
+
+.section3 {
+    background-color: white;
+    border-style: solid;
+    color: white;
+}
+
+.blue-box {
+    background-color: #3882F6;
+    margin: 150px 150px;
+    padding: 30px 150px;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 300px;
+
+}
+
+.c2a {
+    font-size: 24px;
+    color: #f9faf8;
+    margin-bottom: 5px;
+}
+
+.c2a-description {
+    margin-top: 0px;
+    color: #e5e7eb;
+}
+
+.button2 {
+    border-color: white;
+}
