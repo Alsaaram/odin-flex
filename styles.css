@@ -1,183 +1,236 @@
 body {
-    background-color: #1F2937;
+  background-color: #1F2937;
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
-    padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
 }
 
 .nav ul, .nav ul a {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-    text-decoration: none;
-    color: #e5e7eb;
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+  color: #e5e7eb;
 }
 
+/*
+  Does not make sense to have font size and color in this, as they have nothing
+  to do with alignment.
+
+  A better name would have been ml-200 or margin-left-200.
+*/
+/*
+  Why margin left? Would be better to set a width to the container and center it.
+  Users will have screens of different sizes. View this on your monitor,
+  you'll see that the layout breaks.
+
+  Same applies to .right.
+
+  The section with the CTA and sign up button has the same issue.
+*/
 .left {
-    font-size: 24px;
-    color: #f9faf8;
-    margin-left: 200px;
+  font-size: 24px;
+  color: #f9faf8;
+  margin-left: 200px;
 }
+
+/*
+  ml-220 or margin-left-220 would have been a better name.
+
+  .left or .right makes more sense for float: left or float: right.
+
+  Again, font-size has nothing to do with alignment.
+*/
 
 .right {
-    margin-right: 220px;
-    font-size: 18px;
+  margin-right: 220px;
+  font-size: 18px;
 }
+
+/*
+ This class is a good example of why having a .flex class would be better.
+ Imagine in a large web project, where you need a div with only display set to flex.
+ You would have wrote a new class each time. Or you couldve simply used the granular
+ .flex class.
+*/
 
 .header-bottom {
-    display: flex;
+  display: flex;
 }
 
-.header-info, .p1{
-    font-size: 48px;
-    margin-right: 140px;
-    color: #f9faf8;
+.header-info, .p1 {
+  font-size: 48px;
+  margin-right: 140px;
+  color: #f9faf8;
 }
 
 .p1 {
-    margin: auto;
+  margin: auto;
 }
 
 .p2 {
-    margin: auto;
+  margin: auto;
 }
 
 .p3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .header-info, .p2 {
-    font-size: 18px;
-    color: #e5e7eb;
+  font-size: 18px;
+  color: #e5e7eb;
 }
 
 .header-image {
-    padding: 0 140px;
-    background-color: grey;
-    display: flex;
-    align-items: center;
+  padding: 0 140px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
 }
 
 button {
-    background-color: #3882F6;
-    color: white;
-    font-size: 18px;
-    border-radius: 10px;
-    padding: 10px 30px;
-    margin-top: 10px;
+  background-color: #3882F6;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px 30px;
+  margin-top: 10px;
 }
 
 .section-one {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100px;
-    background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  background-color: white;
 }
 
 .p4 {
-    color: black;
-    font-size: 36px;
+  color: black;
+  font-size: 36px;
 }
 
 .box-container {
-    display: flex;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .box {
-    width: 150px;
-    height: 150px;
-    border-style: solid;
-    border-color: #3882F6;
-    border-width: 5px;
-    border-radius: 10px;
+  /*
+  The thing with flex is that you can assign widths, or gaps.
+  I would not do both.
+
+  E.g. if you only assign widths, justify content will automatically
+  space them out evenly.
+
+  If you only assign gaps, the widths will be automatically calculated.
+
+  */
+  width: 150px;
+  height: 150px;
+  border-style: solid;
+  border-color: #3882F6;
+  border-width: 5px;
+  border-radius: 10px;
 }
 
 .subtext-container {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    text-align: center;
-    padding-bottom: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  text-align: center;
+  padding-bottom: 100px;
 
 }
 
+/*
+  As you are using display:flex and justify-content: center, frequently,
+  would make to have a .flex and justify-center class.
+
+  Then you can just add those classes to any element. It will cut down the amount
+  of CSS you have to write and keep classes leaner.
+*/
+
 .subtext {
-    width: 130px;
-    margin-top: 5px;
+  width: 130px;
+  margin-top: 5px;
 }
 
 .section2 {
-    background-color: #e5e7eb;
-    display: flex;
-    padding: 0px 370px;
-    flex-direction: column;
-    font-size: 36px;
-    padding-top: 80px;
+  background-color: #e5e7eb;
+  display: flex;
+  padding: 0px 370px;
+  flex-direction: column;
+  font-size: 36px;
+  padding-top: 80px;
 }
 
 .quote {
-    color: #1F2937;
+  color: #1F2937;
 }
 
 .author {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    padding: 0;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 30px;
 }
 
+/*
+Don't number classes. If you're going to group styles in a single class, name
+it after what it represents on the page.
+*/
+
 .section3 {
-    background-color: white;
-    border-style: solid;
-    color: white;
+  background-color: white;
+  border-style: solid;
+  color: white;
 }
 
 .blue-box {
-    background-color: #3882F6;
-    margin: 150px 150px;
-    padding: 30px 150px;
-    border-style: solid;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 300px;
-
+  background-color: #3882F6;
+  margin: 150px 150px;
+  padding: 30px 150px;
+  border-style: solid;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 300px;
 }
 
 .c2a {
-    font-size: 24px;
-    color: #f9faf8;
-    margin-bottom: 5px;
+  font-size: 24px;
+  color: #f9faf8;
+  margin-bottom: 5px;
 }
 
 .c2a-description {
-    margin-top: 0px;
-    color: #e5e7eb;
+  /* for 0px, just use 0*/
+  margin-top: 0px;
+  color: #e5e7eb;
 }
 
 .button2 {
-    border-color: white;
+  border-color: white;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #f9faf8;
-    margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f9faf8;
+  margin: 30px 0px;
 }
