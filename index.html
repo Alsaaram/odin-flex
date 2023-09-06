@@ -6,80 +6,97 @@
     <title>Landing Page</title>
 </head>
 
+<!--
+Notes:
+- first class with header-top did nothing, the class did not exist.
+- nav would not contain the header logo, only the links
+- use semantic tags
+-->
+
 <body>
-    <div class="header-top">
-        <div class="nav">
-            <div class="left">
-                <p>Header logo</p>
-            </div>
-            <div class="right">
-                <ul>
-                    <li>
-                        <a href="url needed">Header link one</a>
-                    </li>
-                    <li>
-                        <a href="url needed">Header link two</a>
-                    </li>
-                    <li>
-                        <a href="url needed">Header link three</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<!--
+This is how I would approach the header:
+    - width on <header> or make it 100% width, depending on design
+    - make the <header> display:flex
+    - make the <header> justify-content:space-between
+        - this will push the logo to the left and the nav to the right
+        - a lot less css this way, i.e. cleaner, more maintainable, easier for
+            other developers to understand
+
+-->
+<header class="nav">
+    <div class="left">
+        <h1>Header Logo</h1>
     </div>
-    <div class="header-bottom">
-        <div class="left header-info">
-            <p class="p1">This website is awesome</p>
-            <p class="p2">This website has some subtext that goes here under the main title. 
-                It's a smaller font and the color is lower contrast
+    <nav class="right">
+        <ul>
+            <li>
+                <a href="url needed">Header link one</a>
+            </li>
+            <li>
+                <a href="url needed">Header link two</a>
+            </li>
+            <li>
+                <a href="url needed">Header link three</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="header-bottom">
+    <div class="left header-info">
+        <!-- A better name than p1 would be hero-title-->
+        <p class="p1">This website is awesome</p>
+        <!-- A better name would be hero-description -->
+        <p class="p2">This website has some subtext that goes here under the main title.
+            It's a smaller font and the color is lower contrast
+        </p>
+        <button type="button">Sign up</button>
+    </div>
+    <div class="right header-image">
+        <div class="p3">This is a placeholder for an image</div>
+    </div>
+</div>
+<section class="section-one">
+    <div class="p4">
+        <p>Some random information</p>
+    </div>
+</section>
+<div class="box-container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+<div class="subtext-container">
+    <div class="subtext">this is some subtext under an illustration or image</div>
+    <div class="subtext">this is some subtext under an illustration or image</div>
+    <div class="subtext">this is some subtext under an illustration or image</div>
+    <div class="subtext">this is some subtext under an illustration or image</div>
+</div>
+<section class="section2">
+    <div class="quote">
+        <p><i>This is an inspiring quote, or a testimonial from a customer.
+            Maybe it's just filling up space, or maybe people will actually read it.
+            Who knows? All I know is that it looks nice.</i>
+        </p>
+    </div>
+    <div class="author">
+        <p>-Thor, God of Thunder</p>
+    </div>
+</section>
+<section class="section3">
+    <div class="blue-box">
+        <div class="c2a-text">
+            <p class="c2a">Call to action! It's time!</p>
+            <p class="c2a-description">
+                Sign up for our product by clicking that button right over there!
             </p>
-            <button type="button">Sign up</button>
         </div>
-        <div class="right header-image">
-            <div class="p3">This is a placeholder for an image</div>
-        </div>
+        <button class="button2" type="button">Sign up</button>
     </div>
-    <div class="section-one">
-        <div class="p4">
-            <p>Some random information</p>
-        </div>
-    </div>    
-    <div class="box-container">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </div>
-    <div class="subtext-container">
-        <div class="subtext">this is some subtext under an illustration or image</div>
-        <div class="subtext">this is some subtext under an illustration or image</div>
-        <div class="subtext">this is some subtext under an illustration or image</div>
-        <div class="subtext">this is some subtext under an illustration or image</div>
-    </div>
-    <div class="section2">
-        <div class="quote">
-            <p><i>This is an inspiring quote, or a testimonial from a customer. 
-                Maybe it's just filling up space, or maybe people will actually read it. 
-                Who knows? All I know is that it looks nice.</i>
-            </p>
-        </div>
-        <div class="author">
-            <p>-Thor, God of Thunder</p>
-        </div>
-    </div>
-    <div class="section3">
-        <div class="blue-box">
-            <div class="c2a-text">
-                <p class="c2a">Call to action! It's time!</p>
-                <p class="c2a-description">Sign up for our product by clicking that button
-                right over there!
-                </p>
-            </div>
-            <button class="button2" type="button">Sign up</button>
-        </div>
-    </div>
-    <footer>
-        <p class="footer-text">Copyright <span>&copy</span> The Odin Project 2021</p>
-    </footer>
+</section>
+<footer>
+    <p class="footer-text">Copyright <span>&copy</span> The Odin Project 2021</p>
+</footer>
 </body>
 </html>
